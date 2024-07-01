@@ -5,7 +5,7 @@ This utility is designed for situations where you have lost Django migration fil
 ## Assumptions
 
 - You are familiar with how migrations work in Django.
-- You have lost the migration files and need assistance in faking the migration sets.
+- You have lost the migration files and need assistance in faking the migration sets. (This could happen due to any number of circumstances in team environments, or from not having pulled migration files back down from a containerized environment once upon a time)
 - You can modify the script to suit your unique environment by supplying your app names in the `APP_NAMES` list and providing database credentials.
 - You are using a MySQL database (the script can likely be ported to PostgreSQL using `psycopg2`).
 
