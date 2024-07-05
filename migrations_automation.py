@@ -50,7 +50,7 @@ def main():
     migration_results = CURSOR.fetchall()
 
     # input request to see if we should continue or quit
-    if len(migration_results) > 0:
+    if migration_results:
         print("The following migrations will be deleted:")
         for row in migration_results:
             print(row)
@@ -62,7 +62,7 @@ def main():
     print("Deleting the migration entries...")
 
     # This is how we are going to delete the migration entries - this is all done dynamically
-    if len(migration_results) > 0:
+    if migration_results:
         for row in migration_results:
             CURSOR.execute("DELETE FROM django_migrations WHERE id = %s", (row[0],))
 
