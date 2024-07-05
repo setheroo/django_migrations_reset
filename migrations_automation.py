@@ -67,14 +67,14 @@ def main():
             CURSOR.execute("DELETE FROM django_migrations WHERE id = %s", (row[0],))
 
         DB.commit()
-    
+
     print("Checking if migration entries have been deleted!")
 
     CURSOR.execute(query, APP_NAMES)
 
     post_delete_migration_entries = CURSOR.fetchall()
 
-    if len(post_delete_migration_entries) > 0:
+    if post_delete_migration_entries:
         print("The following migration entries still exist:")
         for row in post_delete_migration_entries:
             print(row)
