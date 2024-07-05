@@ -1,8 +1,8 @@
 # Django Migration File Recovery Utility
 
-First and foremost, it must be stated that using a tool like this goes against all best practices for handling migration files and states. But in some unfortunate circumstances you might find yourself needing to handle a bad situation where those files are gone while also needing to extend your models to include new attributes.
+It’s important to note that using this tool violates best practices for managing migration files and states. However, in rare cases where migration files are lost and you need to extend your models, this utility can help.
 
-This utility is designed for situations where you have lost Django migration files and need to extend your models and push new migrations to an already deployed database.
+This tool is specifically designed for situations where Django migration files are missing, yet you need to update your models and apply new migrations to a live database.
 
 ## Assumptions
 
