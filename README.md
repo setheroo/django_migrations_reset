@@ -1,11 +1,13 @@
 # Django Migration File Recovery Utility
 
+First and foremost, it must be stated that using a tool like this goes against all best practices for handling migration files and states. But in some unfortunate circumstances you might find yourself needing to handle a bad situation where those files are gone while also needing to extend your models to include new attributes.
+
 This utility is designed for situations where you have lost Django migration files and need to extend your models and push new migrations to an already deployed database.
 
 ## Assumptions
 
 - You are familiar with how migrations work in Django.
-- The migration files have been lost and you desire automated assistance in faking the migration sets. (This could happen due to any number of circumstances in team environments, or from not having pulled migration files back down from a containerized environment).
+- The migration files have been lost and you desire automated assistance in faking the migration sets. (This could happen due to any number of circumstances in team environments).
 - You can modify the script to suit your unique environment by supplying your app names in the `APP_NAMES` list and providing database credentials.
 - You are using a MySQL database (the script can likely be ported to PostgreSQL using `psycopg2`).
 
